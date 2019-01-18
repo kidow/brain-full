@@ -11,6 +11,8 @@ const handle = app.getRequestHandler()
 app.prepare().then(() => {
   const server = express()
 
+  require('./lib/moduleAlias')
+
   server.use(express.json())
   server.use(express.urlencoded({ extended: false }))
 
