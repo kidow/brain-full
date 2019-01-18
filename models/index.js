@@ -14,4 +14,9 @@ module.exports = () => {
       else console.log('mongoDB connected')
     }
   )
+
+  require('./account')
+  require('./choice')
+  require('./comment')
+  require('./reply')
 }
