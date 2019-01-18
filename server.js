@@ -18,6 +18,8 @@ app.prepare().then(() => {
   server.use(express.json())
   server.use(express.urlencoded({ extended: false }))
 
+  server.use('/', require('./routes'))
+
   server.use((err, req, res, next) => {
     if (err) {
       console.error(err)
